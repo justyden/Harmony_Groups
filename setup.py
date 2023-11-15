@@ -7,5 +7,6 @@ setup(
     install_requires=[
         'setuptools',
         'customtkinter==5.2.1',
+        'packaging==23.2'
     ]
 )
