@@ -103,7 +103,38 @@ if __name__ == "__main__":
     app = GroupChatApp(root, data)
     root.mainloop()
 '''
-app = customtkinter.CTk()
-app.title("Harmony Groups")
-app.geometry("400x550")
+class App(customtkinter.CTk):
+    def __init__(self):
+        super().__init__()
+
+        customtkinter.set_default_color_theme("dark-blue")
+        customtkinter.set_appearance_mode("dark")
+        self.title("my app")
+        self.geometry("400x550")
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure((0, 1), weight=1)
+
+        self.textbox = customtkinter.CTkTextbox(master=self, width=400, corner_radius=0)
+        self.textbox.grid(row=0, column=0, sticky="nsew")
+        self.textbox.insert("0.0", "Some example text!\n" * 50)
+        self.button = customtkinter.CTkButton(self, text="Send Message")
+        self.button.grid(row=1, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
+        self.combobox = groupChatSelection(self, values=["group 1", "group 2", "group 3"])
+        self.checkbox.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsw")
+        
+class groupChatSelection(customtkinter.CTkComboBox):
+    def __init__(self, master, values):
+        super().__init__(master)
+        self.values = values
+        self.combobox = []
+    
+        combobox = customtkinter.CTkComboBox(self, values = self.values,
+            command=combobox_callback)
+        combobox.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
+        self.checkboxes.append(combobox)
+        
+        def combobox_callback(choice):
+            print("combobox dropdown clicked:", choice)
+
+app = App()
 app.mainloop()
