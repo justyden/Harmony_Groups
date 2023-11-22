@@ -1,8 +1,3 @@
-'''
-import tkinter as tk
-from tkinter import scrolledtext
-import customtkinter
-'''
 import tkinter as tk
 from tkinter import scrolledtext
 import customtkinter
