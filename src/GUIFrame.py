@@ -5,6 +5,7 @@ import json
 import os
 
 
+# This is the application GUI.
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
@@ -22,6 +23,8 @@ class App(customtkinter.CTk):
         self.textbox.configure(state="disabled")
         self.button = customtkinter.CTkButton(self, text="Send Message")
         self.button.grid(row=1, column=0, padx=100, pady=1, sticky="ew", columnspan=2)
+        # This creates a combobox and places it in a transparent frame. It is important to note that
+        # there is a combobox_callback function that will do a command when an option is selected.
         self.combobox = groupChatSelection(self, values=["group 1", "group 2", "group 3"])
         self.combobox.grid(row=2, column=0, padx=10, pady=(1, 140), sticky="s")
         self.combobox.configure(fg_color="transparent")
