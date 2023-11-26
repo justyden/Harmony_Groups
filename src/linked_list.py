@@ -11,9 +11,7 @@ class LinkedList:
 
     # For inserting a new user into the LinkedList
     def insert(self, val):
-        # print("hello world")
         # current is a variable used to traverse the linked list
-
         if self.head == None:
             self.head = Node(val)
             self.last = self.head
@@ -46,7 +44,7 @@ class LinkedList:
         # if node to delete is the last node
         elif self.last.val == user:
             # move self.last back to the prev node
-            self.last.prev = self.last
+            self.last = self.last.prev
             # set the new self.last's next to None
             self.last.next = None
         else:
@@ -58,8 +56,6 @@ class LinkedList:
                     current.prev.next = current.next
                     # for the node ahead of current, set its prev value to current.prev
                     current.next.prev = current.prev
-
-
                 current = current.next
 
 
@@ -76,6 +72,8 @@ LL1.display()
 print()
 
 
-LL1.remove("d")
+LL1.remove("b")
 print()
 LL1.display()
+# print()
+# LL1.display_last()
