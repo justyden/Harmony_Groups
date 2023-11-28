@@ -11,7 +11,7 @@
   ],
   "conversations": [
     {
-      "conversationID": "group1",
+      "conversationID": "Running",
       "participants": [
         "user1",
         "user2"
@@ -32,11 +32,55 @@
         {
           "sender": "user1",
           "text": "This is awesome."
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "s"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "s"
+        },
+        {
+          "sender": "user1",
+          "text": "nice"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "nice"
+        },
+        {
+          "sender": "user1",
+          "text": "this is really cool"
         }
       ]
     },
     {
-      "conversationID": "group2",
+      "conversationID": "Swimming",
       "participants": [
         "user1",
         "user3"
@@ -49,6 +93,30 @@
         {
           "sender": "user3",
           "text": "Hi, what's up?"
+        },
+        {
+          "sender": "user1",
+          "text": "Nice\n"
+        },
+        {
+          "sender": "user1",
+          "text": "great"
+        },
+        {
+          "sender": "user1",
+          "text": "wow"
+        },
+        {
+          "sender": "user1",
+          "text": "this is great"
+        },
+        {
+          "sender": "user1",
+          "text": "This is awesome\n"
+        },
+        {
+          "sender": "user1",
+          "text": "Nice"
         }
       ]
     }

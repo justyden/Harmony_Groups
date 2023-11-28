@@ -32,13 +32,35 @@ data = {
 }
 '''
 
+# Find the Database.txt file
+def find_database() -> object:
+    locations_to_check = [
+        "Database.txt",
+        "src/Database.txt",
+        "Harmony_Groups/src/Database.txt",
+    ]
+
+    for location in locations_to_check:
+        try:
+            # Attempt to check if the file exists at the current location
+            if os.path.exists(location):
+                return location
+
+        except Exception as e:
+            pass
+
+    # If the loop completes without finding the file
+    print("The location was of the database was not found. Please check the current directory and try again.")
+    return None
+
+
 # Write to the file
 def update_file(file_name: str, data) -> None:
     with open(file_name, 'w') as file:
         json.dump(data, file, indent=2)
 
 # Read the existing data from the file
-def read_file(file_name: str) -> object:
+def read_file(file_name) -> object:
     with open(file_name, 'r') as file:
         file_content = file.read()
         if not file_content:
@@ -47,7 +69,9 @@ def read_file(file_name: str) -> object:
             data = json.loads(file_content)
         return data
 
-def update_conversation(file_name: str, conversation: str, message: str, userID: str) -> None:
+
+def update_conversation(conversation: str, message: str, userID: str) -> None:
+    file_name = find_database()
     data = read_file(file_name)
     conversation_to_update = next(
         (conv for conv in data["conversations"] if conv["conversationID"] == conversation),
