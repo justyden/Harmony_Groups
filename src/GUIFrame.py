@@ -6,8 +6,7 @@ import os
 from Read_Data import update_conversation, read_file, find_database
 
 
-# This is the application GUI.
-
+# Colors for the application.
 running_color = "#3399BB"
 swimming_color = '#44FF44'
 surfing_color = '#990099'
@@ -15,6 +14,7 @@ background_gray = "#333333"
 light_gray = "#555555"
 white = '#EEEEEE'
 
+# This is the application GUI.
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
