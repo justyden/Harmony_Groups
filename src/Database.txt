@@ -76,6 +76,14 @@
         {
           "sender": "user1",
           "text": "this is really cool"
+        },
+        {
+          "sender": "user1",
+          "text": "hi\nhi"
+        },
+        {
+          "sender": "user1",
+          "text": "hi"
         }
       ]
     },
