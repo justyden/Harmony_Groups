@@ -105,18 +105,18 @@ class HashTable:
         for i in range(self.size):
             self.table[i].display()  # Calls each LinkedList object's display() function
 
+if __name__ == "__main__":
+    h = HashTable(4)  # Example HashTable with size 4 for 4 different activities
+    users = []  # List to store randomly generated User objects
+    for i in range(3):
+        name = h.pick_name()
+        ID = h.pick_id()
+        users.append(User(name,ID))  # Creates new User object and appends it to users list
 
-h = HashTable(4)  # Example HashTable with size 4 for 4 different activities
-users = []  # List to store randomly generated User objects
-for i in range(3):
-    name = h.pick_name()
-    ID = h.pick_id()
-    users.append(User(name,ID))  # Creates new User object and appends it to users list
+    for u in users:
+        print("user:",u)  # Displays randomly created User objects
+        hash = h.custom_hash(u.id)
+        index = h.calc_index(hash)
+        h.insert_user(u, index)  # Inserts User objects into positions based on their hash code
 
-for u in users:
-    print("user:",u)  # Displays randomly created User objects
-    hash = h.custom_hash(u.id)
-    index = h.calc_index(hash)
-    h.insert_user(u, index)  # Inserts User objects into positions based on their hash code
-
-h.print_table()  # Prints the HashTable
+    h.print_table()  # Prints the HashTable

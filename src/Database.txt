@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "userID": "user1",
+      "userID": "1",
       "userName": "Jason Crisp"
     },
     {
-      "userID": "user2",
+      "userID": "2",
       "userName": "Nick Taylor"
     }
   ],
@@ -13,8 +13,8 @@
     {
       "conversationID": "Running",
       "participants": [
-        "user1",
-        "user2"
+        "1",
+        "2"
       ],
       "messages": [
         {
@@ -118,8 +118,8 @@
     {
       "conversationID": "Swimming",
       "participants": [
-        "user1",
-        "user3"
+        "1",
+        "3"
       ],
       "messages": [
         {
