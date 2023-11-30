@@ -29,12 +29,12 @@ It is preferred to launch this application from a venv since there are a few req
 ### User Manual
 - Login screen
   - Start by typing in the correct user information into the login page. If entered incorrectly a prompt will pop up stating that and you will be asked to try again.
-  - ![Login Screen](images/login_screen.png)
+  - <img src="images/login_screen.png" alt="Login Screen" width="500" height="250"/>
 - Main application
   - Upon successful login the user is greeted with a default layout for the application. The user must first choose a group from the combobox near the bottom of the screen.
-  - ![Default Screen](images/no_group_selected.png)
+  - <img src="images/no_group_selected.png" alt="No Group Selected" width="250" height="400"/>
   - Once a group is selected, and the user is a member of that group, the user will then be switched to that group. This is noted by the change of border colors within the application.
-  - ![Group Selected](images/group_selected.png)
+  - <img src="images/group_selected.png" alt="Group Selecetd" width="250" height="400"/>
   - The user can now begin seeing and typing messages to the other users within that group.
   
 ## Code Structure
