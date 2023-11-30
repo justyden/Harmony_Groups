@@ -108,6 +108,10 @@
         {
           "sender": "Jason Crisp",
           "text": "Awesome"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "My friends call me 'JaCrispy'"
         }
       ]
     },
@@ -149,6 +153,10 @@
         {
           "sender": "user1",
           "text": "Nice"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "I'm so good at swimming, I can make Michael Phelps look slow!"
         }
       ]
     }
