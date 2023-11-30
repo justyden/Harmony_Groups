@@ -1,4 +1,5 @@
-from src.linked_list import LinkedList
+from LinkedList import LinkedList
+from User import User
 import random
 import string
 
