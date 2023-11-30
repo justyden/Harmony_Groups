@@ -41,3 +41,12 @@ class User:
             str: A string that represents the user's ID
         """
         return self.id
+
+    def __str__(self):
+        """
+        Returns the name of the User object when printed
+
+        Returns:
+             str: User object's name value
+        """
+        return self.name
