@@ -104,6 +104,10 @@
         {
           "sender": "Jason Crisp",
           "text": "This is awesome"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "Awesome"
         }
       ]
     },

@@ -2,5 +2,6 @@
 
 from GUIFrame import App
 
-
+app = App()
+app.mainloop()
 
