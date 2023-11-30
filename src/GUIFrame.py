@@ -1,5 +1,5 @@
 import customtkinter
-from tkinter import simpledialog, messagebox
+from tkinter import messagebox
 from Verify_Users import check_user_in_list
 from Read_Data import update_conversation, read_file, find_database
 
