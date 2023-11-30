@@ -79,7 +79,11 @@
         },
         {
           "sender": "user1",
-          "text": "Hello everyone!"
+          "text": "hi\nhi"
+        },
+        {
+          "sender": "user1",
+          "text": "hi"
         }
       ]
     },
@@ -121,14 +125,6 @@
         {
           "sender": "user1",
           "text": "Nice"
-        },
-        {
-          "sender": "user1",
-          "text": "How's the water today?"
-        },
-        {
-          "sender": "user1",
-          "text": "I heard it's supposed to be cold today.\n"
         }
       ]
     }
