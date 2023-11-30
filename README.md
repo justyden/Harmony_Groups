@@ -29,6 +29,7 @@ It is preferred to launch this application from a venv since there are a few req
 ### User Manual
 - Login screen
   - Start by typing in the correct user information into the login page. If entered incorrectly a prompt will pop up stating that and you will be asked to try again.
+  - ![Login Screen](images/login_screen.png)
 - Main application
   - Upon successful login the user is greeted with a default layout for the application. The user must first choose a group from the combobox near the bottom of the screen.
   - Once a group is selected, and the user is a member of that group, the user will then be switched to that group. This is noted by the change of border colors within the application.
