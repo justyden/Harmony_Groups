@@ -1,65 +1,42 @@
-'''
-This is an example hash function from ChatGPT.
-The examle UserId I used was a12b34c56 so basically
-(char)(num)(num)(char)(num)(num)(char)(num)(num)
-'''
 from src.linked_list import LinkedList
 import random
 import string
-'''
-User class that represents a user in a group chat.
-Users will have a Name to be identified in a group chat,
-and an ID which identifies which groups they have access
-to.
-'''
-class User:
+
+"""
+HashTable class that represents a Hash Table data structure.
+Each element of the HashTable object will hold a LinkedList object,
+representing an activity (e.g. Swimming) group chat. The Nodes
+in the LinkedList objects represent User objects part of the
+activity group chat.
+"""
+class HashTable:
     """
-    The User class for creating unique User objects.
+    The HashTable class for creating a Hash Table object
 
     Attributes:
-        name: str
-        id: str
+        size: int
+        table: List
     """
-
-    def __init__(self, name, id) -> None:
+    def __init__(self, size):
         """
-        Initializes User object with a name and id
+        Constructs HashTable object with a size and a list
 
         Args:
-        name (str): The user's name
-        id (str):  The user's account ID
+             size (int): the size of the HashTable list
         """
-        self.name = name
-        self.id = id
-
-    def get_name(self) -> str:
-        """
-        Gets the name of the User instance
-
-        Returns:
-            str: A string that represents the user's name
-        """
-        return self.name
-
-    def get_id(self) -> str:
-        """
-        Gets the ID of the User instance
-
-        Returns:
-            str: A string that represents the user's ID
-        """
-        return self.id
-
-    def __str__(self):
-        return self.name
-
-
-class HashTable:
-    def __init__(self, size):
         self.size = size
-        self.table = [LinkedList() for i in range(size)]  # add linkedlist objects to each index in the array
+        self.table = [LinkedList() for i in range(size)]  # The hash table (a list), stores LinkedList objects at each index
 
     def custom_hash(self, input_string):
+        """
+        Creates a hash code for a User's id
+
+        Args:
+            input_string (str): a User object's id value
+
+        Returns:
+            int: the hash code value generated from the hash function
+        """
         hash_value = 5381  # a prime number
 
         for char in input_string:
@@ -69,89 +46,76 @@ class HashTable:
         return hash_value
 
     def calc_index(self, hash_code):
-        index = hash_code % self.size
+        """
+        Calculates the index of the HashTable the object should be placed in based on its hash code
+
+        Args:
+            hash_code (int): the hash code of the User object's id value
+
+        Returns:
+            int: the index of the hash table to place the object
+        """
+        index = hash_code % self.size  # Calculates the index based on the size of the array
         return index
 
     def insert_user(self, user, index):
-        self.table[index].insert(user)  # Inserts user object in the LinkedList at the specified index
+        """
+        Inserts a User object into the LinkedList object at the given HashTable index
+
+        Args:
+            user (User): the User object to be placed in the LinkedList
+        """
+        self.table[index].insert(user)  # Inserts User object in the LinkedList at the specified index
 
     def pick_name(self):
+        """
+        Picks a random name when creating a User object
+
+        Returns:
+             str: a name from the names[] list for a User object
+        """
         names = ["James", "Mary", "Robert", "Jennifer", "Michael", "Susan", "Richard", "Lisa", "Daniel", "Nicole",
                  "Justin", "Sarah", "Anthony", "Ashley", "Steven", "Emily", "Kevin", "Amanda", "Jason", "Laura"]
-        return random.choice(names)
+        return random.choice(names)  # Selects and returns random name from the list
 
     def pick_id(self):
-        letters = string.ascii_lowercase
-        identifier = ""
-        switch = False
+        """
+        Randomly generates a User id when creating a User object
+
+        Returns:
+            str: an id for a User object
+        """
+        letters = string.ascii_lowercase  # Creates a list of lowercase letters
+        identifier = ""  # Variable to store the newly created User id
+        switch = False  #  Variable to alternate between picking a letter or number
         for i in range(6):
             if not switch:
-               identifier  += random.choice(letters)
+               identifier  += random.choice(letters)  # Appends random letter
                switch = True
             else:
-                identifier += str(random.randint(10,99))
+                identifier += str(random.randint(10,99))  # Appends random number
                 switch = False
         return identifier
 
-
-
     def print_table(self):
+        """
+        Prints out the HashTable
+        """
         for i in range(self.size):
-            self.table[i].display()
+            self.table[i].display()  # Calls each LinkedList object's display() function
 
 
-u1 = User("Sam", "a12b34c56")
-u2 = User("Greg", "a12b34c56")
-u3 = User("Tom", "a12b34c56")
-u4 = User("Rick", "x29y81z76")
-
-h = HashTable(4)
-# #h.print_table()
-# hash1 = h.custom_hash(u1.id)
-# # print(hash1)
-# index1 = h.calc_index(hash1)
-# # print(index1)
-# h.insert_user(u1, index1)
-# # print("checking output")
-# # h.check_table()
-#
-# hash2 = h.custom_hash(u2.id)
-# # print(hash2)
-# index2 = h.calc_index(hash2)
-# # print(index2)
-# h.insert_user(u2, index2)
-# # print("checking output")
-# # h.check_table()
-#
-# hash3 = h.custom_hash(u3.id)
-# # print(hash2)
-# index3 = h.calc_index(hash3)
-# # print(index2)
-# h.insert_user(u3, index3)
-# # print("checking output")
-# # h.check_table()
-#
-# hash4 = h.custom_hash(u4.id)
-# print(hash4)
-# index4 = h.calc_index(hash4)
-# print(index4)
-# h.insert_user(u4, index4)
-# print("checking output")
-# h.print_table()
-
-#print(h.pick_id())
-
-users = []
+h = HashTable(4)  # Example HashTable with size 4 for 4 different activities
+users = []  # List to store randomly generated User objects
 for i in range(3):
     name = h.pick_name()
     ID = h.pick_id()
-    users.append(User(name,ID))
+    users.append(User(name,ID))  # Creates new User object and appends it to users list
 
-print("going to print user array")
 for u in users:
-    print("user:",u)
+    print("user:",u)  # Displays randomly created User objects
     hash = h.custom_hash(u.id)
     index = h.calc_index(hash)
-    h.insert_user(u, index)
-    #print(u)
-h.print_table()
+    h.insert_user(u, index)  # Inserts User objects into positions based on their hash code
+
+h.print_table()  # Prints the HashTable
