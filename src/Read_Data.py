@@ -32,8 +32,13 @@ data = {
 }
 '''
 
-# Find the Database.txt file
 def find_database() -> object:
+    """
+    Finds the location of Database.txt.
+
+    Returns:
+        str: Path to Database.txt
+    """
     locations_to_check = [
         "Database.txt",
         "src/Database.txt",
@@ -54,13 +59,28 @@ def find_database() -> object:
     return None
 
 
-# Write to the file
 def update_file(file_name: str, data) -> None:
+    """
+    Updates the database.
+
+    Args:
+        file_name (str): Path to the database
+        data (_type_): Data to be input.
+    """
     with open(file_name, 'w') as file:
         json.dump(data, file, indent=2)
 
-# Read the existing data from the file
+
 def read_file(file_name) -> object:
+    """
+    Reads the database.
+
+    Args:
+        file_name (str): Path to the database.
+
+    Returns:
+        json: A json object.
+    """
     with open(file_name, 'r') as file:
         file_content = file.read()
         if not file_content:
@@ -71,6 +91,14 @@ def read_file(file_name) -> object:
 
 
 def update_conversation(conversation: str, message: str, userID: str) -> None:
+    """
+    Updates a conversation within the database.
+
+    Args:
+        conversation (str): The conversation ID
+        message (str): The message to be input
+        userID (str): The user that typed the message
+    """
     file_name = find_database()
     data = read_file(file_name)
     conversation_to_update = next(

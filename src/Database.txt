@@ -2,11 +2,11 @@
   "users": [
     {
       "userID": "user1",
-      "userName": "John Doe"
+      "userName": "Jason Crisp"
     },
     {
       "userID": "user2",
-      "userName": "Jane Doe"
+      "userName": "Nick Taylor"
     }
   ],
   "conversations": [
@@ -84,6 +84,30 @@
         {
           "sender": "user1",
           "text": "hi"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "This is getting crazy"
+        },
+        {
+          "sender": "user1",
+          "text": "This is getting really awesome"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "This is awesome"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "Awesome"
         }
       ]
     },
