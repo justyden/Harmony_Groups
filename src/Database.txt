@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "userID": "user1",
+      "userName": "John Doe"
+    },
+    {
+      "userID": "user2",
+      "userName": "Jane Doe"
+    }
+  ],
+  "conversations": [
+    {
+      "conversationID": "Running",
+      "participants": [
+        "user1",
+        "user2"
+      ],
+      "messages": [
+        {
+          "sender": "user1",
+          "text": "Hello, how are you?"
+        },
+        {
+          "sender": "user2",
+          "text": "I'm good, thanks!"
+        },
+        {
+          "sender": "user1",
+          "text": "This is awesome."
+        },
+        {
+          "sender": "user1",
+          "text": "This is awesome."
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "s"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "s"
+        },
+        {
+          "sender": "user1",
+          "text": "nice"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "a"
+        },
+        {
+          "sender": "user1",
+          "text": "nice"
+        },
+        {
+          "sender": "user1",
+          "text": "this is really cool"
+        },
+        {
+          "sender": "user1",
+          "text": "hi\nhi"
+        },
+        {
+          "sender": "user1",
+          "text": "hi"
+        }
+      ]
+    },
+    {
+      "conversationID": "Swimming",
+      "participants": [
+        "user1",
+        "user3"
+      ],
+      "messages": [
+        {
+          "sender": "user1",
+          "text": "Hey there!"
+        },
+        {
+          "sender": "user3",
+          "text": "Hi, what's up?"
+        },
+        {
+          "sender": "user1",
+          "text": "Nice\n"
+        },
+        {
+          "sender": "user1",
+          "text": "great"
+        },
+        {
+          "sender": "user1",
+          "text": "wow"
+        },
+        {
+          "sender": "user1",
+          "text": "this is great"
+        },
+        {
+          "sender": "user1",
+          "text": "This is awesome\n"
+        },
+        {
+          "sender": "user1",
+          "text": "Nice"
+        }
+      ]
+    }
+  ]
+}
