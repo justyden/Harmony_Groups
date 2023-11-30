@@ -64,8 +64,10 @@ class LinkedList:
         """
         current = self.head  # current is a variable used to iterate through the LinkedList
         while current is not None:
-            print(current.val, end=" ")
+            # print(current.val, "\n", end=" ")  # NOTE: might be a solution
+            print(current.val, end=" ")  # NOTE: prints each individual LinkedList on same line
             current = current.next  # Changes current's value to the next Node in the list
+        print()  # Used to create a new line for printing all LinkedList objects
 
     def remove(self, user):
         """
