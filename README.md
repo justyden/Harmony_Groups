@@ -32,7 +32,9 @@ It is preferred to launch this application from a venv since there are a few req
   - ![Login Screen](images/login_screen.png)
 - Main application
   - Upon successful login the user is greeted with a default layout for the application. The user must first choose a group from the combobox near the bottom of the screen.
+  - ![Default Screen](images/no_group_selected.png)
   - Once a group is selected, and the user is a member of that group, the user will then be switched to that group. This is noted by the change of border colors within the application.
+  - ![Group Selected](images/group_selected.png)
   - The user can now begin seeing and typing messages to the other users within that group.
   
 ## Code Structure
