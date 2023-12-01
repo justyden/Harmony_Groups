@@ -89,3 +89,30 @@ class LinkedList:
                     current.prev.next = current.next  # For the Node behind current, set its next value to current.next
                     current.next.prev = current.prev  # For the Node ahead of current, set its prev value to current.prev
                 current = current.next
+
+
+    def search_user_by_id(self, user_id):
+        """
+        Searches the linked list for a user with a specified user ID
+
+        Args:
+            user_id (str): The user ID to search for
+
+        Returns:
+            bool: True if a user with the specified ID is found, False otherwise.
+        """
+        current = self.head
+        while current:
+            if current.data.get_id() == user_id:
+                return True  # User found
+            current = current.next
+        return False  # User not found
+
+    def is_empty(self):
+        """
+        Checks if the linked list is empty
+
+        Returns:
+            bool: True if the linked list is empty, False otherwise
+        """
+        return self.head is None

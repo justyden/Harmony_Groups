@@ -3,10 +3,13 @@ from User import User
 import random
 import string
 
+# The examle UserId I used was a12b34c56 so basically
+# (char)(num)(num)(char)(num)(num)(char)(num)(num)
+
 """
 HashTable class that represents a Hash Table data structure.
-Each element of the HashTable object will hold a LinkedList object,
-representing an activity (e.g. Swimming) group chat. The Nodes
+Each HashTable object represents a different activity, and each
+element in the HashTable will store a LinkedList object. The Nodes
 in the LinkedList objects represent User objects part of the
 activity group chat.
 """
@@ -104,6 +107,18 @@ class HashTable:
         """
         for i in range(self.size):
             self.table[i].display()  # Calls each LinkedList object's display() function
+
+    def is_linked_list_empty(self):
+        """
+        Checks if the LinkedList object at the specified index in the HashTable is empty
+
+        Args:
+            index (int): the index of the HashTable
+
+        Returns:
+            bool: True if the linked list is empty, False otherwise
+        """
+        return self.table[index].is_empty()
 
 
 h = HashTable(4)  # Example HashTable with size 4 for 4 different activities
