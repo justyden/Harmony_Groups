@@ -1,166 +1,255 @@
 {
   "users": [
     {
-      "userID": "1",
+      "userID": "a24c92a45",
       "userName": "Jason Crisp"
     },
     {
-      "userID": "2",
+      "userID": "a23g49a39",
       "userName": "Nick Taylor"
+    },
+    {
+      "userID": "a12b34c56",
+      "userName": "Alice Johnson"
+    },
+    {
+      "userID": "a78d90e12",
+      "userName": "Bob Smith"
+    },
+    {
+      "userID": "f34g56h78",
+      "userName": "Eva Davis"
+    },
+    {
+      "userID": "i90j12k34",
+      "userName": "Chris Harris"
+    },
+    {
+      "userID": "l56m78n90",
+      "userName": "Olivia Turner"
+    },
+    {
+      "userID": "o12p34q56",
+      "userName": "David Robinson"
+    },
+    {
+      "userID": "r78s90t12",
+      "userName": "Emma White"
+    },
+    {
+      "userID": "u34v56w78",
+      "userName": "Frank Miller"
+    },
+    {
+      "userID": "x90y12z34",
+      "userName": "Grace Brown"
+    },
+    {
+      "userID": "b56c78d90",
+      "userName": "Henry Moore"
+    },
+    {
+      "userID": "e12f34g56",
+      "userName": "Ivy Clark"
+    },
+    {
+      "userID": "h78i90j12",
+      "userName": "John Turner"
+    },
+    {
+      "userID": "k34l56m78",
+      "userName": "Karen Davis"
+    },
+    {
+      "userID": "n90o12p34",
+      "userName": "Leo Taylor"
+    },
+    {
+      "userID": "q56r78s90",
+      "userName": "Nina Harris"
+    },
+    {
+      "userID": "t12u34v56",
+      "userName": "Oscar Robinson"
+    },
+    {
+      "userID": "w78x90y12",
+      "userName": "Penny Smith"
+    },
+    {
+      "userID": "z34a56b78",
+      "userName": "Quincy White"
     }
   ],
   "conversations": [
     {
       "conversationID": "Running",
       "participants": [
-        "1",
-        "2"
+        "a24c92a45",
+        "a23g49a39",
+        "a12b34c56",
+        "a78d90e12",
+        "f34g56h78",
+        "i90j12k34",
+        "l56m78n90"
       ],
       "messages": [
         {
-          "sender": "user1",
+          "sender": "Jason Crisp",
           "text": "Hello, how are you?"
         },
         {
-          "sender": "user2",
+          "sender": "Nick Taylor",
           "text": "I'm good, thanks!"
-        },
-        {
-          "sender": "user1",
-          "text": "This is awesome."
-        },
-        {
-          "sender": "user1",
-          "text": "This is awesome."
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "s"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "s"
-        },
-        {
-          "sender": "user1",
-          "text": "nice"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "nice"
-        },
-        {
-          "sender": "user1",
-          "text": "this is really cool"
-        },
-        {
-          "sender": "user1",
-          "text": "hi\nhi"
-        },
-        {
-          "sender": "user1",
-          "text": "hi"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "a"
-        },
-        {
-          "sender": "user1",
-          "text": "This is getting crazy"
-        },
-        {
-          "sender": "user1",
-          "text": "This is getting really awesome"
-        },
-        {
-          "sender": "Jason Crisp",
-          "text": "This is awesome"
-        },
-        {
-          "sender": "Jason Crisp",
-          "text": "Awesome"
-        },
-        {
-          "sender": "Jason Crisp",
-          "text": "My friends call me 'JaCrispy'"
-        },
-        {
-          "sender": "Jason Crisp",
-          "text": "Yah\n"
         }
       ]
     },
     {
       "conversationID": "Swimming",
       "participants": [
-        "1",
-        "3"
+        "a24c92a45",
+        "l56m78n90",
+        "o12p34q56"
       ],
       "messages": [
         {
-          "sender": "user1",
-          "text": "Hey there!"
+          "sender": "Jason Crisp",
+          "text": "a"
+        }
+      ]
+    },
+    {
+      "conversationID": "Surfing",
+      "participants": [
+        "a24c92a45",
+        "a12b34c56",
+        "o12p34q56",
+        "r78s90t12",
+        "u34v56w78",
+        "x90y12z34"
+      ],
+      "messages": [
+        {
+          "sender": "Jason Crisp",
+          "text": "Let's catch some waves!"
         },
         {
-          "sender": "user3",
-          "text": "Hi, what's up?"
+          "sender": "Alice Johnson",
+          "text": "Sounds fun!"
         },
         {
-          "sender": "user1",
-          "text": "Nice\n"
+          "sender": "David Robinson",
+          "text": "Surf's up!"
+        }
+      ]
+    },
+    {
+      "conversationID": "Hiking",
+      "participants": [
+        "a24c92a45",
+        "a78d90e12",
+        "i90j12k34",
+        "o12p34q56",
+        "u34v56w78",
+        "z34a56b78"
+      ],
+      "messages": [
+        {
+          "sender": "Jason Crisp",
+          "text": "Ready for a hike?"
         },
         {
-          "sender": "user1",
-          "text": "great"
+          "sender": "Bob Smith",
+          "text": "Absolutely! Let's go explore nature."
+        }
+      ]
+    },
+    {
+      "conversationID": "Reading",
+      "participants": [
+        "a24c92a45",
+        "b56c78d90",
+        "e12f34g56",
+        "h78i90j12",
+        "k34l56m78",
+        "n90o12p34"
+      ],
+      "messages": [
+        {
+          "sender": "Jason Crisp",
+          "text": "Let's discuss our favorite books!"
         },
         {
-          "sender": "user1",
-          "text": "wow"
+          "sender": "Henry Moore",
+          "text": "I recently read a great novel."
         },
         {
-          "sender": "user1",
-          "text": "this is great"
+          "sender": "Ivy Clark",
+          "text": "I love reading mysteries."
         },
         {
-          "sender": "user1",
-          "text": "This is awesome\n"
+          "sender": "John Turner",
+          "text": "Anyone up for a book club meeting?"
         },
         {
-          "sender": "user1",
+          "sender": "Leo Taylor",
+          "text": "Wow"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "This is awesome"
+        },
+        {
+          "sender": "Leo Taylor",
           "text": "Nice"
         },
         {
+          "sender": "Leo Taylor",
+          "text": "Really cool"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "Wow"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "That is awesome"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "Wow"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "Nice"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "Great"
+        },
+        {
+          "sender": "Leo Taylor",
+          "text": "Nice"
+        }
+      ]
+    },
+    {
+      "conversationID": "Sports",
+      "participants": [
+        "a24c92a45",
+        "q56r78s90",
+        "t12u34v56",
+        "w78x90y12",
+        "z34a56b78"
+      ],
+      "messages": [
+        {
           "sender": "Jason Crisp",
-          "text": "I'm so good at swimming, I can make Michael Phelps look slow!"
+          "text": "Who's up for a game of soccer?"
+        },
+        {
+          "sender": "Nina Harris",
+          "text": "I'm in! Let's organize a game!"
         }
       ]
     }

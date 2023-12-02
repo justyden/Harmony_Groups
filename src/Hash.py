@@ -8,8 +8,7 @@ import string
 
 """
 HashTable class that represents a Hash Table data structure.
-Each HashTable object represents a different activity, and each
-element in the HashTable will store a LinkedList object. The Nodes
+Each HashTable object represents a LinkedList object. The Nodes
 in the LinkedList objects represent User objects part of the
 activity group chat.
 """
@@ -21,7 +20,7 @@ class HashTable:
         size: int
         table: List
     """
-    def __init__(self, size):
+    def __init__(self, size, group):
         """
         Constructs HashTable object with a size and a list
 
@@ -30,6 +29,7 @@ class HashTable:
         """
         self.size = size
         self.table = [LinkedList() for i in range(size)]  # The hash table (a list), stores LinkedList objects at each index
+        self.group = group
 
     def custom_hash(self, input_string):
         """
@@ -62,44 +62,16 @@ class HashTable:
         index = hash_code % self.size  # Calculates the index based on the size of the array
         return index
 
-    def insert_user(self, user, index):
+    def insert_user(self, user):
         """
         Inserts a User object into the LinkedList object at the given HashTable index
 
         Args:
             user (User): the User object to be placed in the LinkedList
         """
+        hash = self.custom_hash(str(user.get_id()))
+        index = self.calc_index(hash)
         self.table[index].insert(user)  # Inserts User object in the LinkedList at the specified index
-
-    def pick_name(self):
-        """
-        Picks a random name when creating a User object
-
-        Returns:
-             str: a name from the names[] list for a User object
-        """
-        names = ["James", "Mary", "Robert", "Jennifer", "Michael", "Susan", "Richard", "Lisa", "Daniel", "Nicole",
-                 "Justin", "Sarah", "Anthony", "Ashley", "Steven", "Emily", "Kevin", "Amanda", "Jason", "Laura"]
-        return random.choice(names)  # Selects and returns random name from the list
-
-    def pick_id(self):
-        """
-        Randomly generates a User id when creating a User object
-
-        Returns:
-            str: an id for a User object
-        """
-        letters = string.ascii_lowercase  # Creates a list of lowercase letters
-        identifier = ""  # Variable to store the newly created User id
-        switch = False  #  Variable to alternate between picking a letter or number
-        for i in range(6):
-            if not switch:
-               identifier  += random.choice(letters)  # Appends random letter
-               switch = True
-            else:
-                identifier += str(random.randint(10,99))  # Appends random number
-                switch = False
-        return identifier
 
     def print_table(self):
         """
@@ -108,7 +80,7 @@ class HashTable:
         for i in range(self.size):
             self.table[i].display()  # Calls each LinkedList object's display() function
             
-    def is_linked_list_empty(self):
+    def check_id(self, user_id):
         """
         Checks if the LinkedList object at the specified index in the HashTable is empty
 
@@ -118,20 +90,12 @@ class HashTable:
         Returns:
             bool: True if the linked list is empty, False otherwise
         """
-        return self.table[index].is_empty()
-
-
-h = HashTable(4)  # Example HashTable with size 4 for 4 different activities
-users = []  # List to store randomly generated User objects
-for i in range(3):
-    name = h.pick_name()
-    ID = h.pick_id()
-    users.append(User(name,ID))  # Creates new User object and appends it to users list
-
-for u in users:
-    print("user:",u)  # Displays randomly created User objects
-    hash = h.custom_hash(u.id)
-    index = h.calc_index(hash)
-    h.insert_user(u, index)  # Inserts User objects into positions based on their hash code
-
-h.print_table()  # Prints the HashTable
+        hash = self.custom_hash(str(user_id))
+        spot = self.calc_index(hash)
+        if self.table[spot].is_empty():
+            return False
+        else:
+            return self.table[spot].search_user_by_id(str(user_id))
+        
+    def get_group(self):
+        return self.get_group

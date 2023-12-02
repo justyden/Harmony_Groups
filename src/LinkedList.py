@@ -103,7 +103,7 @@ class LinkedList:
         """
         current = self.head
         while current:
-            if current.data.get_id() == user_id:
+            if current.val.get_id() == user_id:
                 return True  # User found
             current = current.next
         return False  # User not found

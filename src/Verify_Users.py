@@ -31,34 +31,41 @@ def check_user_in_list(input_name, input_id):
     return False
 
 def put_users_in_group():
+    """
+    Reads the users from the database and puts them into the correct groups.
+
+    Returns:
+        dict: Returns a dictionary containing all the hashtables of groups.
+    """
     data = read_file(find_database())
     users = get_users()
 
     # Get the number of different conversations in the database
     conversations = data.get("conversations", [])
-    num_conversations = len(conversations)
 
-    # Create a HashTable with a size equal to the number of conversations
-    hash_table = HashTable(size=num_conversations)
-
+    # Create a dictionary with a size equal to the number of conversations
+    groups = dict()
     # Iterate through conversations and add users to the hash table
     for conversation in conversations:
         conversation_id = conversation.get("conversationID")
         participants = conversation.get("participants", [])
-
-        # Iterate through users and add them to the hash table if they are in the conversation
+        groups[conversation_id] = HashTable(20, conversation_id)
+         # Iterate through users and add them to the hash table if they are in the conversation
         for user in users:
             if user.get_id() in participants:
-                hash_code = hash_table.custom_hash(user.get_id())
-                index = hash_table.calc_index(hash_code)
-                hash_table.insert_user(user, index)
-                
-    return hash_table
+                groups[conversation_id].insert_user(user)
+    return groups
 
-def check_user_in_group(input_id):
-    return
+def check_user_in_group(groups, group_name, user_id):
+    """
+    Checks if a user is in given hash table.
 
-if __name__ == "__main__":
-    # Example usage:
-    user_hash_table = put_users_in_group()
-    user_hash_table.print_table()
+    Args:
+        groups (_type_): The hash table containing the groups.
+        group_name (_type_): The group name.
+        user_id (_type_): The user id.
+
+    Returns:
+        bool: Returns True if the user is found and false otherwise.
+    """
+    return groups[group_name].check_id(user_id)
