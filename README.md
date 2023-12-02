@@ -42,7 +42,71 @@ It is preferred to launch this application from a venv since there are a few req
   - Type a lot of messages to see if a quote pops up. There is a 20% chance for a quote to pop up when sending a message.
   
 ## Code Structure
+<img src="images/diagram.png" alt="Project Structure" width="750" height="500"/>
+
+Our project structure is fairly straightforward; we use a list data structure to create a HashTable class that represents different activities people enjoy, and each HashTable object has LinkedList objects as elements. These LinkedList objects are composed of Node objects, and the Node objects represent User objects that have joined an activity's group chat. User objects represent a user of our application, and User objects have a name and ID as attributes for easy identification.  
+
+On top of all this is our Graphical User Interface (GUI) that the user interacts with. Initially, the user logs in with their name and user ID through a Login GUI window. From there, the main GUI window appears that has the group chat message board, a textbox for entering a message, a 'Send Message' button to send a message, and then a drop-down box to select the different group chats the user wants to explore. Any and all data entered and retrieved from the app is done with the help of the Database.txt file formatted in JSON.  
+
+To summarize, underneath the covers we have a HashTable class to represent different activities such as Running, Swimming, Surfing, etc., and these HashTable objects contain LinkedList objects at each index in the HashTable. The LinkedList objects can contain Node objects, and these Node objects store User objects which represent users who are part of a specific activity's group chat. On top of this are the Login and Main GUI windows, and the GUI consistently communicates with the Database.txt JSON file to send and retrieve information.  
 
 ## List of Functionalities and Test Results
+Our app's functionalities:
+- Login window
+  - Logs in to the app after verifying the user's credentials
+  - Otherwise presents the user with a message box informing the user the credentials they entered were invalid
+- Main window
+  - Shows the user their name and ID in the top-right corner
+  - Shows the current activity's group chat the user is viewing e.g. 'Running' appears at the top when viewing the Running activity's group chat
+  - Displays the chat messages sent by individuals from a specific activity's group chat
+  - Includes a textbox for users to enter a new message
+  - Has a 'Send Message' button to allow users to send their message to the group chat
+  - Includes a drop-down box that allows users to view and select a different activity's group chat
+  - If the user selects a group chat they are not currently a member of, a message box will appear informing them they are not a participant of that group.
+- Database
+  - Stores and retrieves information such as valid users and their ID's, the different activities listed, and the messages the users have sent all in JSON format
+ 
+<img src="images/invalid_user.png" alt="Invalid User"/>
+Example of an invalid user trying to login
+
+<img src="images/invalid_user_msg.png" alt="Invalid User Message"/>
+Window that pops up when invalid user tries to login  
+
+<img src="images/chat_example1.png" alt="Viewing a Group Chat" width="500" height="750"/>
+Example of a user viewing a group chat they are a participant of  
+
+<img src="images/chat_example2.png" alt="User Typing a Message" width="500" height="750"/>
+Example of a user entering a message to a group chat  
+
+<img src="images/chat_example3.png" alt="Entering a Message" width="500" height="750"/>
+After pressing the 'Send Message' button, the message appears in the group chat  
+
+<img src="images/chat_example4.png" alt="Viewing All Activities" width="500" height="850"/>
+Example of all the other activities that have group chats the user can select  
+
+<img src="images/chat_example5.png" alt="Viewing a Different Group Chat" width="500" height="750"/>
+Example of a user viewing a different group chat they are a part of  
+
+<img src="images/chat_example6.png" alt="Entering Another Message" width="500" height="750"/>
+Since the user is also part of this group chat, they can enter a message here and have it display for everyone else to see  
+
+<img src="images/chat_example7.png" alt="Different User Viewing a Group Chat" width="500" height="750"/>
+Example of a different user viewing and posting in a group chat they are a member of  
+
+<img src="images/chat_example8.png" alt="Viewing a Group Chat" width="600" height="750"/>
+Example of a user trying to access a group chat they are not a member of  
 
 ## Discussion and Conclusion
+During the development of the application, we ran into some issues, which include:
+- ensuring the nodes inserted into the linked list were done in proper order
+- updating a Node object's next and previous values when inserting/deleting into/from the Linked List
+- deleting the proper node and re-adjusting the linked list
+- transitioning from the Login window to the Main window after a user logged in  
+
+Some current issues within the project include:
+- when a user enters a long message into the group chat message box, a word may be improperly wrapped
+- there is no way to log out and then log in as a different user without restarting the application
+
+As of right now, our project is geared to be used by a small audience. It is not set up to be used by hundreds or thousands of users, or storing hundreds or thousands of messages as that would require lots of resources. Additionally, the application is not currently set up to be used by more than one user as it is more of a simulation of an actual group chat application such as Discord, and, as mentioned previously, there are some minor issues with text wrapping.  
+
+In terms of application of course learning, we utilized many topics we learned in class. For example, to represent different activities such as Running, Swimming, Surfing, etc. we used a HashTable class that contains a function to uniquely hash a User object's ID, a function to calculate the index in the table (which is a list data structure) the User should be placed into, and the hash table also stores LinkedList objects to handle any collisions from hashing. A Node class with attributes for data value, a pointer to the next Node, and another pointer to the previous Node was created to store User objects within a LinkedList object. And all classes follow an object-oriented approach to create unique instances to represent different objects. For example, the User class is defined an object-oriented manner so multiple User objects can be created to represent different users with different names and ID's. Moreover, all classes are documented using a consistent format to make for easy understanding of the code.  
