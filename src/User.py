@@ -49,4 +49,4 @@ class User:
         Returns:
              str: User object's name value
         """
-        return self.name
+        return self.id

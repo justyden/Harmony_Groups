@@ -107,7 +107,7 @@ class HashTable:
         """
         for i in range(self.size):
             self.table[i].display()  # Calls each LinkedList object's display() function
-
+            
     def is_linked_list_empty(self):
         """
         Checks if the LinkedList object at the specified index in the HashTable is empty
