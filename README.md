@@ -29,13 +29,17 @@ It is preferred to launch this application from a venv since there are a few req
 ### User Manual
 - Login screen
   - Start by typing in the correct user information into the login page. If entered incorrectly a prompt will pop up stating that and you will be asked to try again.
+  - All of the user information can be found in src/Database.txt, and each user is supplied a userID and a username. To check to see if a user is in a certain group you can either switch each gruop when logged in to check or check within Database.txt and see if their userID is a participant in that respective group. 
   - <img src="images/login_screen.png" alt="Login Screen" width="500" height="250"/>
 - Main application
   - Upon successful login the user is greeted with a default layout for the application. The user must first choose a group from the combobox near the bottom of the screen.
   - <img src="images/no_group_selected.png" alt="No Group Selected" width="250" height="400"/>
   - Once a group is selected, and the user is a member of that group, the user will then be switched to that group. This is noted by the change of border colors within the application.
+  - If the user is not apart of the group they switched to, a message will pop up indicating that. 
   - <img src="images/group_selected.png" alt="Group Selecetd" width="250" height="400"/>
   - The user can now begin seeing and typing messages to the other users within that group.
+  - Experiment and play around with the application, upon sending messages, the database updates.
+  - Type a lot of messages to see if a quote pops up. There is a 20% chance for a quote to pop up when sending a message.
   
 ## Code Structure
 
