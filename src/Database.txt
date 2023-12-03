@@ -140,6 +140,14 @@
         {
           "sender": "David Robinson",
           "text": "Surf's up!"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "Let's all hurry up to the beach! Don't wanna miss high tide!"
+        },
+        {
+          "sender": "David Robinson",
+          "text": "Everyone be careful. I heard there's a strong rip current!"
         }
       ]
     },
@@ -250,6 +258,10 @@
         {
           "sender": "Nina Harris",
           "text": "I'm in! Let's organize a game!"
+        },
+        {
+          "sender": "Jason Crisp",
+          "text": "Let's meet up at Memorial Field for the game."
         }
       ]
     }
