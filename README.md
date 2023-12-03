@@ -66,35 +66,85 @@ Our app's functionalities:
 - Database
   - Stores and retrieves information such as valid users and their ID's, the different activities listed, and the messages the users have sent all in JSON format
  
-<img src="images/invalid_user.png" alt="Invalid User"/>
-Example of an invalid user trying to login
+<div style="display: flex; align-items: center;">
+  <img src="images/invalid_user.png" alt="Invalid User" style="margin-right: 10px;">
+  <br>
+  Example of an invalid user trying to login.
+</div>
+<br>
+<br>
 
-<img src="images/invalid_user_msg.png" alt="Invalid User Message"/>
-Window that pops up when invalid user tries to login  
+<div style="display: flex; align-items: center;">
+  <img src="images/invalid_user_msg.png" alt="Invalid User Message">
+  <br>
+  Window that pops up when an invalid user tries to login
+</div>
+<br>
+<br>
 
-<img src="images/chat_example1.png" alt="Viewing a Group Chat" width="500" height="750"/>
-Example of a user viewing a group chat they are a participant of  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example1.png" alt="Viewing a Group Chat" width="500" height="750">
+  <br>
+  Example of a user viewing a group chat they are a participant of
+</div>
+<br>
+<br>
 
-<img src="images/chat_example2.png" alt="User Typing a Message" width="500" height="750"/>
-Example of a user entering a message to a group chat  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example2.png" alt="User Typing a Message" width="500" height="750">
+  <br>
+  Example of a user entering a message to a group chat
+</div>
+<br>
+<br>
 
-<img src="images/chat_example3.png" alt="Entering a Message" width="500" height="750"/>
-After pressing the 'Send Message' button, the message appears in the group chat  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example3.png" alt="Entering a Message" width="500" height="750">
+  <br>
+  After pressing the 'Send Message' button, the message appears in the group chat
+</div>
+<br>
+<br>
 
-<img src="images/chat_example4.png" alt="Viewing All Activities" width="500" height="850"/>
-Example of all the other activities that have group chats the user can select  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example4.png" alt="Viewing All Activities" width="500" height="850">
+  <br>
+  Example of all the other activities that have group chats the user can select
+</div>
+<br>
+<br>
 
-<img src="images/chat_example5.png" alt="Viewing a Different Group Chat" width="500" height="750"/>
-Example of a user viewing a different group chat they are a part of  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example5.png" alt="Viewing a Different Group Chat" width="500" height="750">
+  <br>
+  Example of a user viewing a different group chat they are a part of
+</div>
+<br>
+<br>
 
-<img src="images/chat_example6.png" alt="Entering Another Message" width="500" height="750"/>
-Since the user is also part of this group chat, they can enter a message here and have it display for everyone else to see  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example6.png" alt="Entering Another Message" width="500" height="750">
+  <br>
+  Since the user is also part of this group chat, they can enter a message here and have it display for everyone else to see
+</div>
+<br>
+<br>
 
-<img src="images/chat_example7.png" alt="Different User Viewing a Group Chat" width="500" height="750"/>
-Example of a different user viewing and posting in a group chat they are a member of  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example7.png" alt="Different User Viewing a Group Chat" width="500" height="750">
+  <br>
+  Example of a different user viewing and posting in a group chat they are a member of
+</div>
+<br>
+<br>
 
-<img src="images/chat_example8.png" alt="Viewing a Group Chat" width="600" height="750"/>
-Example of a user trying to access a group chat they are not a member of  
+<div style="display: flex; align-items: center;">
+  <img src="images/chat_example8.png" alt="Viewing a Group Chat" width="600" height="750">
+  <br>
+  Example of a user trying to access a group chat they are not a member of
+</div>
+<br>
+<br>  
 
 ## Discussion and Conclusion
 During the development of the application, we ran into some issues, which include:
